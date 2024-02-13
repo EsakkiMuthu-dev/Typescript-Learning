@@ -2,7 +2,7 @@ type User = {
   readonly _id: string;
   name: string;
   mail: string;
-  readonly check?: Array<string>;
+  readonly check?: ReadonlyArray<string>;
 };
 
 let newUser: User = {
@@ -20,6 +20,7 @@ var roUser: User = {
   mail: "demo@gmail.com",
   check: ["dsjnj", "dsnjj", "sdjkj"],
 };
+
 console.log(roUser);
 roUser.check?.pop();
 console.log(roUser);
